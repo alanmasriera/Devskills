@@ -1,0 +1,92 @@
+/*########## Reset CSS ##########*/
+:root {
+    --main-font: sans.serif;
+    --font-size: 16px;
+    --main-color: #ffee00e5;
+    --second-color: #222;
+    --main-modal-color: rgba(247,222,30,0.85);
+    --second-modal-color: rgba(34,34,34,0.85);
+    --main-color-dark: #222222e5;
+    --second-color-dark: rgb(240, 240, 240);
+    --container-width: 1200px;
+}
+
+.section{
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 100vh;
+    text-align: center;
+}
+
+
+/* ContactForm Validations */
+.new-contact-form{
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.new-contact-form > *{
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+
+.new-contact-form textarea{
+    resize: none;
+}
+
+.new-contact-form legend,
+.new-contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.new-contact-form input,
+.new-contact-form textarea{
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.new-contact-form input[type="submit"]{
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.new-contact-form *::placeholder{
+    color: #000;
+}
+
+.new-contact-form [required]:valid {
+    border: thin solid var(--form-ok-color);
+}
+
+.new-contact-form [required]:invalid {
+    border: thin solid var(--form-error-color);
+}
+
+.new-contact-form-error{
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 800ms ease;
+}
+
+.new-contact-form-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+    display: none;
+}
